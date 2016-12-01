@@ -8,17 +8,18 @@
 }
 
 body {
-  background-color: rgb(90, 55, 22);
-  background: -webkit-linear-gradient(rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22), rgb(7,4, 0)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22), rgb(7,4, 0)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22), rgb(7,4, 0)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22), rgb(7,4, 0)); /* Standard syntax */
+  background: black; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(black, rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22)); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(black, rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22)); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(black, rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22)); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(black, rgb(90, 55, 22), rgb(7,4, 0), rgb(90, 55, 22)); /* Standard syntax */
 }
 
 .navbar {
   background-color: rgb(48, 27, 12);
   border: 0;
   min-height: 100px;
+  width: 100%;
 }
 
 .navbar img {
@@ -99,6 +100,7 @@ body {
  }
 
  .times p {
+   line-height: 15px;
    padding-top: 15px;
  }
 
@@ -124,6 +126,11 @@ body {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+#em, #please {
+  font-size: 13px;
+  line-height: 15px;
 }
 
 .showing h5 {
@@ -202,6 +209,18 @@ body {
   color: #ccc;
   line-height: 20px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .w3-btn {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .poster {
+    margin: 0px 20px 20px 0;
+  }
 }
 
 .clearfix:before,
